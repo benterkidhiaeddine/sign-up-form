@@ -9,7 +9,7 @@ the following features will be available:
 -good UX : when input is invalid , required or both.
 -responsive design.
 
-
+check-it out  at : https://benterkidhiaeddine.github.io/sign-up-form/
 
 credits :
 -background image by insung yoon.

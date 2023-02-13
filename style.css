@@ -221,7 +221,7 @@ h2:first-child{
 
 /*styles for phone */
 
-@media screen and (max-width :480px) {
+@media screen and (max-width :1080px) {
     body{
         flex-flow: column;
     }
