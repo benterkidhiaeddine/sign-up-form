@@ -98,7 +98,7 @@ main {
 .intro > p {
     font-family: "roboto",sans-serif;
     font-size: 18px;
-    width : 60%;
+    width : 80%;
     padding-left : var(--main-padding-left);
     padding-bottom: 30px;
     
@@ -210,9 +210,33 @@ h2:first-child{
 .form-submit > p {
     font-family: sans-serif;
     font-size: 13px;
+    margin-bottom : 20px;
 }
 
 .form-submit a {
     color : var(--button-color);
     text-decoration: none;
+}
+
+
+/*styles for phone */
+
+@media screen and (max-width :480px) {
+    body{
+        flex-flow: column;
+    }
+
+    header{
+        width : 100%;
+    }
+
+    main {
+        width : 100%;
+    }
+
+    .label-input,input {
+        width : 90%;
+    }
+
+    
 }
