@@ -12,9 +12,14 @@
 /*color palette of the webpage*/
 
 :root {
+    /*color variables*/
     --main-background : rgb(249,250,251);
     --register-form-background:rgb(255,255,255);
     --button-color:rgb(89,109,72);
+
+    /*padding and margin variables*/
+
+    --main-padding-left:30px;
     
 }
 
@@ -82,7 +87,7 @@ img[class="logo"] + span {
     width : 100%;
     padding-top : 100px;
     background-color: var(--main-background);
-    margin-bottom: 30px;
+    
 }
 
 
@@ -90,7 +95,7 @@ img[class="logo"] + span {
     font-family: "roboto",sans-serif;
     font-size: 18px;
     width : 60%;
-    margin-left : 30px;
+    padding-left : var(--main-padding-left);
     padding-bottom: 30px;
     
 
@@ -101,3 +106,70 @@ p + p {
     
     font-style: italic;
 }
+
+/*style for the form section of the webpage */
+h2 {
+    font-family: "roboto",sans-serif;
+}
+label {
+    display: block;
+    font-family: sans-serif;
+    color : rgb(31,41,55);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+input{
+    width : 200px;
+    padding : 5px 10px;
+    font-family: sans-serif;
+    outline : none;
+    border : solid 1px #eee;
+    border-radius: 3px;
+}
+
+input:focus{
+    border : solid 1px rgb(77,115,223);
+    border-radius: 3px;
+    box-shadow: 3px 3px 3px rgb(239,239,239);
+}
+
+input + span {
+    position : relative;
+}
+
+input:required + span::before{
+    position: absolute;
+    content : "*";
+    color : red;
+    
+    font-size: 11px;
+    display: inline-block;
+    top : -22px;
+    left : -10px;
+}
+
+
+
+
+.form-inputs{
+
+    background-color: var(--register-form-background);
+    font-size: 15px;
+    padding-left: var(--main-padding-left);
+}
+
+h2:first-child{
+    padding-top: 20px;
+}
+
+.form-inputs > * {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;;
+    gap : 40px;
+}
+
