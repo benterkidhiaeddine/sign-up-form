@@ -9,6 +9,15 @@
 
 }
 
+/*color palette of the webpage*/
+
+:root {
+    --main-background : rgb(249,250,251);
+    --register-form-background:rgb(255,255,255);
+    --button-color:rgb(89,109,72);
+    
+}
+
 /* general styles */ 
 
 *,::before,::after{
@@ -61,4 +70,34 @@ img[class="logo"] + span {
     font-size: 65px;
     font-family: "norsebold",sans-serif;
    
+}
+
+/*style for the main section*/
+
+
+.intro {
+
+
+   
+    width : 100%;
+    padding-top : 100px;
+    background-color: var(--main-background);
+    margin-bottom: 30px;
+}
+
+
+.intro > p {
+    font-family: "roboto",sans-serif;
+    font-size: 18px;
+    width : 60%;
+    margin-left : 30px;
+    padding-bottom: 30px;
+    
+
+    
+}
+
+p + p {
+    
+    font-style: italic;
 }
