@@ -9,13 +9,23 @@
 
 }
 
+
+@font-face {
+    font-family: 'abibasmedium';
+    src: url('./abibas-font/abibas-webfont.woff2') format('woff2'),
+         url('./abibas-font/abibas-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /*color palette of the webpage*/
 
 :root {
     /*color variables*/
     --main-background : rgb(249,250,251);
     --register-form-background:rgb(255,255,255);
-    --button-color:rgb(89,109,72);
+    --button-color:rgb(149,24,35);
 
     /*padding and margin variables*/
 
@@ -43,7 +53,7 @@ body {
 header{
     width : 33.33%;
     height : 100%;
-    background-image: url("./images/background-image.jpg") ;
+    background-image: url("./images/sidney-pearce-yPMJliKzyc4-unsplash.jpg") ;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -55,8 +65,8 @@ main{
 
 /*style for the header section*/
 .title-container{
-    margin-top: 120px;
-    background-color: rgb(0,0,0,0.5);
+    margin-top: 150px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,10 +81,10 @@ img[class="logo"]{
 
 }
 
-img[class="logo"] + span {
+ h1 {
     color : white;
     font-size: 65px;
-    font-family: "norsebold",sans-serif;
+    font-family: "abibasmedium",sans-serif;
    
 }
 
@@ -82,13 +92,16 @@ img[class="logo"] + span {
 
 main {
     background-color: var(--main-background) ;
+    display: flex;
+    flex-direction: column;
     
 }
 
 .intro {
 
 
-   
+    
+
     width : 100%;
     padding-top : 100px;
    
@@ -119,7 +132,7 @@ h2 {
 }
 label {
     display: block;
-    font-family: sans-serif;
+    font-family: "robot",sans-serif;
     color : rgb(31,41,55);
     font-size: 12px;
     font-weight: 600;
@@ -148,8 +161,8 @@ input:required + span::before{
     position: absolute;
     content : "*";
     color : red;
-    
-    font-size: 11px;
+    font-family: "roboto",sans-serif;
+    font-size: 12px;
     display: block;
     top : -22px;
     left : -10px;
@@ -162,6 +175,7 @@ input:required + span::before{
     font-size: 15px;
     padding-left: var(--main-padding-left);
     box-shadow: 3px 5px 3px rgb(239,239,239);
+    
 }
 
 h2:first-child{
@@ -175,7 +189,7 @@ h2:first-child{
 .form-row {
     display: flex;
     flex-direction: row;;
-    gap : 40px;
+    gap : 100px;
     flex-wrap: wrap;
 }
 
@@ -183,17 +197,20 @@ h2:first-child{
 .password-error{
     color : red;
     display: block;
+    font-family:   "roboto",sans-serif;;
 }
 
 /*register button section */ 
 .form-submit{
+    
+
     padding-left: var(--main-padding-left);
 }
 
 .form-submit > button{
     margin-top: 20px;
     background-color:var(--button-color) ;
-    font-size: 15px;
+    font-size: 18px;
     color :white; 
     border : none ;
     border-radius : 5px ;
@@ -226,11 +243,13 @@ h2:first-child{
 /*visibility class  for error messages */
 .invisible {
     opacity: 0;
+    height : 0;
 }
 
 
 .visible {
-    opacity: 1;;
+    opacity: 1;
+    height: auto;
 }
 
 /*styles for phone */
@@ -244,13 +263,39 @@ h2:first-child{
         width : 100%;
     }
 
+    .title-container{
+        margin-top: 75px;
+        margin-bottom:  75px;
+    }
+
     main {
         width : 100%;
     }
 
     .label-input,input {
-        width : 90%;
+        width :200px;
+       
     }
 
+    h2{
+        text-align: center;
+    }
+
+    .form-row{
+        gap : 20px;
+        justify-content: center;
+    }
+
+    .form-submit {
+        display :flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        
+    }
+
+  
+
     
+  
 }

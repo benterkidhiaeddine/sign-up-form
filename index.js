@@ -8,8 +8,17 @@ const passwordError = document.querySelector(".password-error");
 
 let visible = false;
 //
-passwordConfirmInput.addEventListener("input",()=>{
-    
+passwordConfirmInput.addEventListener("input",showError);
+passwordInput.addEventListener("input",showError)
+
+submitButton.addEventListener("click",(e)=>{
+    if(passwordInput.value !== passwordConfirmInput.value){
+        e.preventDefault();
+    }
+})
+
+
+function showError (){
     if(passwordInput.value !== passwordConfirmInput.value){
         
         //prevent the default behavior that is to submit the form
@@ -29,13 +38,4 @@ passwordConfirmInput.addEventListener("input",()=>{
             visible = false;
         }
     }
-});
-
-
-submitButton.addEventListener("click",(e)=>{
-    if(passwordInput.value !== passwordConfirmInput.value){
-        e.preventDefault();
-    }
-})
-
-
+}
