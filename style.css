@@ -168,7 +168,22 @@ input:required + span::before{
     left : -10px;
 }
 
-
+input:focus:invalid + span::after{
+    content : "✖";
+    color : red;
+    
+}
+input:focus:invalid {
+    border:3px solid red;
+}
+input:focus:valid + span::after{
+    content : "✓";
+    color: green;
+    
+}
+input:focus:valid {
+    border : 3px solid green;
+}
 .form-inputs{
 
     background-color: var(--register-form-background);
@@ -294,8 +309,32 @@ h2:first-child{
         
     }
 
-  
+    
+    input:focus + span {
+        position: relative;
+    }
 
+   
+
+    input:focus:invalid + span::after{
+        position: absolute;
+        right :-20px;
+        bottom: -1px;
+        content : "✖";
+        color : red;
+        
+    }
+
+
+    input:focus:valid + span::after{
+        position: absolute;
+        right :-20px;
+        bottom: -1px;
+        content : "✓";
+        font-weight: bold;
+        color: green;
+        
+    }
     
   
 }
