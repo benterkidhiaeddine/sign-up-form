@@ -215,6 +215,11 @@ h2:first-child{
     font-family:   "roboto",sans-serif;;
 }
 
+small {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
 /*register button section */ 
 .form-submit{
     
