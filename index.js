@@ -8,27 +8,32 @@ const passwordError = document.querySelector(".password-error");
 
 let visible = false;
 //
-passwordConfirmInput.addEventListener("input",showError);
-passwordInput.addEventListener("input",showError)
+passwordConfirmInput.addEventListener("input",passwordMismatch);
+passwordInput.addEventListener("input",passwordMismatch)
 
 submitButton.addEventListener("click",(e)=>{
     if(passwordInput.value !== passwordConfirmInput.value){
+       //prevent the default behavior that is to submit the form
         e.preventDefault();
     }
 })
 
 
-function showError (){
+function passwordMismatch(){
+    
+    
     if(passwordInput.value !== passwordConfirmInput.value){
         
-        //prevent the default behavior that is to submit the form
         
+       {
         if(!visible){
             passwordError.classList.remove("invisible");
             passwordError.classList.add("visible");
             visible = true;
 
         }
+       } 
+    
 
     }
     else if (passwordConfirmInput.value === passwordInput.value){
@@ -39,3 +44,5 @@ function showError (){
         }
     }
 }
+
+
