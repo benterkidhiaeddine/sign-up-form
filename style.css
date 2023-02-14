@@ -150,12 +150,10 @@ input:required + span::before{
     color : red;
     
     font-size: 11px;
-    display: inline-block;
+    display: block;
     top : -22px;
     left : -10px;
 }
-
-
 
 
 .form-inputs{
@@ -179,6 +177,12 @@ h2:first-child{
     flex-direction: row;;
     gap : 40px;
     flex-wrap: wrap;
+}
+
+
+.password-error{
+    color : red;
+    display: block;
 }
 
 /*register button section */ 
@@ -218,6 +222,16 @@ h2:first-child{
     text-decoration: none;
 }
 
+
+/*visibility class  for error messages */
+.invisible {
+    opacity: 0;
+}
+
+
+.visible {
+    opacity: 1;;
+}
 
 /*styles for phone */
 
